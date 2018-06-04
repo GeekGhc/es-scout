@@ -1,0 +1,63 @@
+#app{
+    padding-top: 48px;
+}
+.search-panel{
+    text-align: center;
+    box-shadow: 0 1px 3px 0 #D4D4D5, 0 0 0 1px #D4D4D5;
+    padding: 24px;
+}
+.es-search{
+    margin: 20px auto;
+    text-align: center;
+}
+.es-search input{
+    min-width: 488px;
+}
+.search-panel .panel-header{
+    padding: 12px;
+    border-bottom: 1px solid rgba(0,0,0,.05)!important;
+}
+.search-panel .panel-header em{
+    color: #DB2828!important;
+    font-style: normal;
+}
+.search-panel .panel-body .result{
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.search-panel .panel-body .result .title{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: rgba(0,0,0,.85);
+    display: inline-block;
+}
+.search-panel .panel-body .result .title em{
+    color: #DB2828!important;
+    font-style: normal;
+}
+.search-panel .panel-body .result .author{
+    color:#777;
+    margin-left: 10px;
+}
+.search-panel .panel-body .result .author em{
+    color: #DB2828!important;
+    font-style: normal;
+}
+.search-panel .panel-body .result .content{
+    color: #666;
+    font-size: 1em;
+    color: rgba(0,0,0,.4);
+    word-break: break-all;
+    margin-bottom: 16px;
+}
+.search-panel .panel-body .result .content em{
+    color: #DB2828!important;
+    font-style: normal;
+}
+.search-panel .panel-body .empty-content{
+    padding:32px;
+    font-size: 2em;
+    color: #777;
+}

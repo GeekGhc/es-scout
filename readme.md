@@ -1,4 +1,5 @@
 ## Laravel-Elasticsearch
+`Laravel`集成`Elasticsearch6`进行全文搜索并配合高亮结果显示
 
 首先先集成`Java`环境 具体参考[这篇文章](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-debian-8)
 

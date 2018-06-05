@@ -29,7 +29,20 @@ php artisan scout:import "App\Post"
 ```
 $ curl -X GET 'localhost:9200/_cat/indices?v&pretty'
 ```
-
+高亮配置参考请求方式
+```
+curl -X POST 'localhost:9200/scout/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": { "match": { "title" : "yuor key" } },
+  "highlight" : {
+        "pre_tags" : ["<tag1>", "<tag2>"],
+        "post_tags" : ["</tag1>", "</tag2>"],
+        "fields" : {
+          "title": {}
+        }
+    }
+}'
+```
 访问`http://es-scout.example/search`
 
 ![1.gif](/public/screenshot/1.gif)

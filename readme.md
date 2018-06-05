@@ -10,17 +10,23 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.171-b11, mixed mode)
 ```
 下载`es`压缩包
 ```
-wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.3.zip
+$ wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.3.zip
 ```
 解压后 进入解压后文件夹
 ```
-./bin/elasticsearch
+$ ./bin/elasticsearch
 ```
-安装完毕后 使用`thinker`生成`post`测试数据
+安装完毕后 配置并迁移数据库
+
+使用`thinker`生成`post`测试数据
 
 使用`scout`导入集群
 ```
 php artisan scout:import "App\Post"
+```
+查看`ES`索引情况
+```
+$ curl -X GET 'localhost:9200/_cat/indices?v&pretty'
 ```
 
 访问`http://es-scout.example/search`

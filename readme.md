@@ -3,7 +3,7 @@
 
 首先先集成`Java`环境 具体参考[这篇文章](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-debian-8)
 
-安装过`java`环境后可以 可以执行`java --version`
+安装过`java`环境后可以 执行`java --version`查看
 ```
 java version "1.8.0_171"
 Java(TM) SE Runtime Environment (build 1.8.0_171-b11)
@@ -13,7 +13,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.171-b11, mixed mode)
 ```
 $ wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.3.zip
 ```
-解压后 进入解压后文件夹
+解压后 进入解压后文件夹启动
 ```
 $ ./bin/elasticsearch
 ```
@@ -29,11 +29,11 @@ php artisan scout:import "App\Post"
 ```
 $ curl -X GET 'localhost:9200/_cat/indices?v&pretty'
 ```
-高亮配置参考请求方式
+高亮配置参考请求方式(具体配置在`App/Libraries/EsEngine` 可自定义)
 ```
 curl -X POST 'localhost:9200/scout/_search?pretty' -H 'Content-Type: application/json' -d'
 {
-  "query": { "match": { "title" : "yuor key" } },
+  "query": { "match": { "title" : "your key" } },
   "highlight" : {
         "pre_tags" : ["<tag1>", "<tag2>"],
         "post_tags" : ["</tag1>", "</tag2>"],
